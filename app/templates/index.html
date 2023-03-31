@@ -1,0 +1,19 @@
+{% extends './layout.html' %}
+
+{% block title %}{{data.title}}{% endblock %}
+
+{% block body %}
+
+<h1>{{data.bienvenida}}</h1>
+
+{% if data.n_pokemons > 0 %} 
+<ul>
+ {% for p in data.usuario %}
+ <li> {{p}} </li> 
+ {% endfor %}
+</ul>
+ {% else %}
+ <h2>No hay pokémons</h2>
+ {% endif %}
+
+{% endblock %}
